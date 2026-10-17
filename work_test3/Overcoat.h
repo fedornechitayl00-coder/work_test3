@@ -35,8 +35,8 @@ public:
 	Overcoat operator++(int);
 	Overcoat& operator--();
 	Overcoat operator--(int);
-	friend std::ostream& operator<<(std::ostream& out, const Overcoat& c);
-	friend std::istream& operator>>(std::ostream& in, const Overcoat& c);
+	friend std::ostream& operator<<(std::ostream& out, const Overcoat& obj);
+	friend std::istream& operator>>(std::ostream& in, const Overcoat& obj);
 
 
 };

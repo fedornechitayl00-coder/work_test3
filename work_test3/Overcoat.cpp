@@ -96,22 +96,34 @@ Overcoat& Overcoat::operator++()
 
 Overcoat Overcoat::operator++(int)
 {
+    Overcoat tmp = (*this);
+    ++(*this);
+    return tmp;
 }
 
 Overcoat& Overcoat::operator--()
 {
+    (*this) -= 1;
+    return *this;
 }
 
 Overcoat Overcoat::operator--(int)
 {
+    Overcoat tmp = (*this);
+    --(*this);
+    return tmp;
 }
 
-std::ostream& operator<<(std::ostream& out, const Overcoat& c)
+std::ostream& operator<<(std::ostream& out, const Overcoat& obj)
 {
-    // TODO: insert return statement here
+    out << "\nname:" << obj.getName() <<
+        "\ntype:" << obj.getType() <<
+        "\nsize:" << obj.getOvercoatSize() <<
+        "\nprice:" << obj.getPrice() <<
+        "\nnumber:" << obj.number;
 }
 
-std::istream& operator>>(std::ostream& in, const Overcoat& c)
+std::istream& operator>>(std::ostream& in, const Overcoat& obj)
 {
-    // TODO: insert return statement here
+    in >> obj.name >> obj.type >> obj.overcoatSize >> obj.price;
 }

@@ -18,15 +18,9 @@
     <ClInclude Include="Overcoat.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\perevantazenns_operatoriv\perevantazenns_operatoriv\Date.h">
-      <Filter>Source Files</Filter>
-    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Overcoat.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\perevantazenns_operatoriv\perevantazenns_operatoriv\Date.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="main.cpp">
