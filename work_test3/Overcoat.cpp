@@ -121,9 +121,11 @@ std::ostream& operator<<(std::ostream& out, const Overcoat& obj)
         "\nsize:" << obj.getOvercoatSize() <<
         "\nprice:" << obj.getPrice() <<
         "\nnumber:" << obj.number;
+    return out;
 }
 
-std::istream& operator>>(std::ostream& in, const Overcoat& obj)
+std::istream& operator>>(std::istream& in, Overcoat& obj)
 {
     in >> obj.name >> obj.type >> obj.overcoatSize >> obj.price;
+    return in;
 }
