@@ -121,6 +121,11 @@ bool Overcoat::operator>=(const Overcoat& obj) const&
     return (*this > obj) || (*this == obj);
 }
 
+bool Overcoat::operator<=(const Overcoat& obj) const&
+{
+    return (*this < obj) || (*this == obj);
+}
+
 Overcoat& Overcoat::operator-=(int value)
 {
     this->price -= value;
