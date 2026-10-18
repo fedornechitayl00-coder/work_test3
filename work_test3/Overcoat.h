@@ -4,15 +4,15 @@
 
 class Overcoat
 {
-	static int number;
 public:
 	std::string name;
 	std::string type;
 	int overcoatSize;
 	float price;
+	int number;
 
 	Overcoat();
-	Overcoat(std::string name, std::string type,int overcoatSize, float price);
+	Overcoat(std::string name, std::string type, int overcoatSize, float price,int number = 1);
 
 	std::string getName() const;
 	void setName(std::string name);

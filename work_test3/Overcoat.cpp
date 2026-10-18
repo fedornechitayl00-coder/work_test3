@@ -6,14 +6,16 @@ Overcoat::Overcoat()
     type = "undefined";
     overcoatSize = 0;
     price = 0.0f;
+    number = 0;
 }
 
-Overcoat::Overcoat(std::string name, std::string type, int overcoatSize, float price)
+Overcoat::Overcoat(std::string name, std::string type, int overcoatSize, float price, int number)
 {
     this->name = name;
     this->type = type;
     this->overcoatSize = overcoatSize;
     this->price = price;
+    this->number = number;
 }
 
 std::string Overcoat::getName() const
@@ -87,11 +89,13 @@ void Overcoat::showSize() const
 
 void Overcoat::showInfo() const
 {
-    std::cout << "\nname:" << getName() <<
-        "\ntype:" << getType() <<
-        "\nsize:"; showSize();
-        std::cout << "\nprice:" << getPrice() <<
-        "\nnumber:" << number;
+    std::cout << "\n________________________\n";
+    std::cout << "name:\t" << getName() <<
+        "\ttype:\t" << getType() <<
+        "\nsize:\t"; showSize();
+        std::cout << "\nprice:\t" << getPrice() <<
+        "\tnumber:\t" << number;
+    std::cout << "\n________________________\n";
 }
 
 bool Overcoat::operator==(const Overcoat& obj) const&

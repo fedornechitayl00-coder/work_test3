@@ -23,12 +23,14 @@ void Shop::biggerSize(Overcoat itemChangeSize)
 
 void Shop::findByType(std::string type)
 {
-	auto itemType = std::find_if(shop.begin(), shop.end(), [&type](const Overcoat& item) {return item.type == type; });
-	if (itemType != shop.end()) {
-		std::cout << "\nFinded item:" << itemType->type << "\n";
-	}
-	else {
-		std::cout << "\nnot found\n";
+	for (int i = 0; i < shop.size(); ++i) {
+		if (shop[i].type == type) {
+			std::cout << "founded:";
+			shop[i].showInfo();
+		}
+		else if (i == shop.size()) {
+			std::cout << "nothing found";
+		}
 	}
 }
 

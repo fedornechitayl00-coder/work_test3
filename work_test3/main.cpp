@@ -1,13 +1,12 @@
 #include "Overcoat.h"
 #include "Shop.h"
 
-static int number = 1;
 
 int main()
 {
-	Overcoat A("coat", "female", 3, 900);
-	Overcoat B("jeans", "female", 3, 1200);
-	Overcoat C("T-shirt", "male", 5, 800);
+	Overcoat A("coat", "female", 3, 900, 1001);
+	Overcoat B("jeans", "female", 3, 1200, 1002);
+	Overcoat C("T-shirt", "male", 5, 800, 1003);
 	A.showInfo();
 	B.showInfo();
 	C.showInfo();
