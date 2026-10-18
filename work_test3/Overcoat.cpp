@@ -10,6 +10,10 @@ Overcoat::Overcoat()
 
 Overcoat::Overcoat(std::string name, std::string type, std::string overcoatSize, float price)
 {
+    this->name = name;
+    this->type = type;
+    this->overcoatSize = overcoatSize;
+    this->price = price;
 }
 
 std::string Overcoat::getName() const
@@ -86,6 +90,18 @@ bool Overcoat::operator<(const Overcoat& obj) const&
 bool Overcoat::operator>=(const Overcoat& obj) const&
 {
     return (*this > obj) || (*this == obj);
+}
+
+Overcoat& Overcoat::operator-=(int value)
+{
+    this->price -= value;
+    return *this;
+}
+
+Overcoat& Overcoat::operator+=(int value)
+{
+    this->price += value;
+    return *this;
 }
 
 Overcoat& Overcoat::operator++()

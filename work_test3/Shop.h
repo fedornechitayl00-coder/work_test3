@@ -7,8 +7,8 @@ class Shop
 {
 	std::vector <Overcoat> shop;
 public:
-	void addItem(Overcoat newItem);
-	void deleteItem(Overcoat itemToDel);
+	void addItem(const Overcoat& newItem);
+	void deleteItem(const Overcoat& itemToDel);
 	void biggerSize(Overcoat itemChangeSize);
 	void findByType(std::string type);
 	void sortByPrice();

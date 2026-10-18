@@ -31,6 +31,8 @@ public:
 	bool operator<(const Overcoat& obj) const&;
 	bool operator>=(const Overcoat& obj) const&;
 	bool operator>=(const Overcoat& obj) const&;
+	Overcoat& operator -=(int value);
+	Overcoat& operator +=(int value);
 	Overcoat& operator++();
 	Overcoat operator++(int);
 	Overcoat& operator--();
