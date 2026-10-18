@@ -56,12 +56,41 @@ void Overcoat::setPrice(float price)
     if (price > 0) this->price = price;
 }
 
+void Overcoat::showSize() const
+{
+    switch (getOvercoatSize()) {
+    case 1:
+        std::cout << "XXS";
+        break;
+    case 2:
+        std::cout << "XS";
+        break;
+    case 3:
+        std::cout << "S";
+        break;
+    case 4:
+        std::cout << "M";
+        break;
+    case 5:
+        std::cout << "L";
+        break;
+    case 6:
+        std::cout << "XL";
+        break;
+    case 7:
+        std::cout << "XXL";
+        break;
+    default:
+        std::cout << "unknown size";
+    }
+}
+
 void Overcoat::showInfo() const
 {
     std::cout << "\nname:" << getName() <<
         "\ntype:" << getType() <<
-        "\nsize:" << getOvercoatSize() <<
-        "\nprice:" << getPrice() <<
+        "\nsize:"; showSize();
+        std::cout << "\nprice:" << getPrice() <<
         "\nnumber:" << number;
 }
 

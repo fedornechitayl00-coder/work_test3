@@ -4,13 +4,13 @@
 
 class Overcoat
 {
-protected:
+	static int number;
+public:
 	std::string name;
 	std::string type;
 	int overcoatSize;
 	float price;
-	static int number;
-public:
+
 	Overcoat();
 	Overcoat(std::string name, std::string type,int overcoatSize, float price);
 
@@ -23,6 +23,7 @@ public:
 	float getPrice() const;
 	void setPrice(float price);
 
+	void showSize() const;
 	void showInfo() const;
 
 	bool operator==(const Overcoat& obj) const&;
@@ -30,7 +31,7 @@ public:
 	bool operator>(const Overcoat& obj) const&;
 	bool operator<(const Overcoat& obj) const&;
 	bool operator>=(const Overcoat& obj) const&;
-	bool operator>=(const Overcoat& obj) const&;
+	bool operator<=(const Overcoat& obj) const&;
 	Overcoat& operator -=(int value);
 	Overcoat& operator +=(int value);
 	Overcoat& operator++();
@@ -43,4 +44,3 @@ public:
 
 };
 
-int number = 0;
