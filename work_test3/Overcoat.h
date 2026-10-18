@@ -7,19 +7,19 @@ class Overcoat
 protected:
 	std::string name;
 	std::string type;
-	std::string overcoatSize;
+	int overcoatSize;
 	float price;
 	static int number;
 public:
 	Overcoat();
-	Overcoat(std::string name, std::string type, std::string overcoatSize, float price);
+	Overcoat(std::string name, std::string type,int overcoatSize, float price);
 
 	std::string getName() const;
 	void setName(std::string name);
 	std::string getType() const;
 	void setType(std::string type);
-	std::string getOvercoatSize() const;
-	void setOvercoatSize(std::string size);
+	int getOvercoatSize() const;
+	void setOvercoatSize(int size);
 	float getPrice() const;
 	void setPrice(float price);
 

@@ -4,11 +4,11 @@ Overcoat::Overcoat()
 {
     name = "noname";
     type = "undefined";
-    overcoatSize = "noname";
+    overcoatSize = 0;
     price = 0.0f;
 }
 
-Overcoat::Overcoat(std::string name, std::string type, std::string overcoatSize, float price)
+Overcoat::Overcoat(std::string name, std::string type, int overcoatSize, float price)
 {
     this->name = name;
     this->type = type;
@@ -36,12 +36,12 @@ void Overcoat::setType(std::string type)
     if(!type.empty()) this->type = type;
 }
 
-std::string Overcoat::getOvercoatSize() const
+int Overcoat::getOvercoatSize() const
 {
     return overcoatSize;
 }
 
-void Overcoat::setOvercoatSize(std::string size)
+void Overcoat::setOvercoatSize(int size)
 {
     this->overcoatSize = overcoatSize;
 }
