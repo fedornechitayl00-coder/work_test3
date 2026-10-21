@@ -4,13 +4,13 @@
 
 class Overcoat
 {
-public:
+protected:
 	std::string name;
 	std::string type;
 	int overcoatSize;
 	float price;
 	int number;
-
+public:
 	Overcoat();
 	Overcoat(std::string name, std::string type, int overcoatSize, float price,int number = 1);
 
